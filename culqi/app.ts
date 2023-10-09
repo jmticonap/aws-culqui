@@ -1,5 +1,5 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
-import CardController from './src/controllers/card.controller';
+import CardController from './src/controllers/cardController';
 
 /**
  *

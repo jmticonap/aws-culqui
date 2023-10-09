@@ -7,10 +7,11 @@
   "author": "SAM CLI",
   "license": "MIT",
   "scripts": {
-    "unit": "jest",
+    "test:unit": "jest --verbose",
+    "test:watch": "jest --verbose --watch",
     "lint": "eslint '*.ts' --quiet --fix",
     "compile": "tsc",
-    "test": "npm run compile && npm run unit"
+    "test": "npm run compile && npm run test:unit"
   },
   "dependencies": {
     "esbuild": "^0.14.14",
