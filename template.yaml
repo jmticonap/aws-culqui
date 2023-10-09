@@ -19,6 +19,11 @@ Resources:
       Runtime: nodejs18.x
       Architectures:
         - x86_64
+      Environment:
+        Variables:
+          REDIS_PASSWORD: nlDiYyKx4Pm7oHscaCpH9Ur51mAih74F
+          REDIS_HOST: redis-18616.c8.us-east-1-4.ec2.cloud.redislabs.com
+          REDIS_PORT: 18616
       Events:
         Culqi:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
@@ -41,6 +46,11 @@ Resources:
       Runtime: nodejs18.x
       Architectures:
         - x86_64
+      Environment:
+        Variables:
+          REDIS_PASSWORD: nlDiYyKx4Pm7oHscaCpH9Ur51mAih74F
+          REDIS_HOST: redis-18616.c8.us-east-1-4.ec2.cloud.redislabs.com
+          REDIS_PORT: 18616
       Events:
         Culqi:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
