@@ -21,6 +21,46 @@ Para correr el proyecto de forma local podemos ejecutar
 $ sam local start-api
 ```
 
+## Referencia del API
+
+#### Save Card
+
+```http
+  POST /card
+```
+
+Request:
+| Field | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `email`      | `string` | **Requerido**. Email del propietario de la tarje |
+| `card_number`      | `string` | **Requerido**. Numero de tarjeta |
+| `cvv`      | `string` | **Requerido**. Numero de cvv de la tarje |
+| `expiration_year`      | `string` | **Requerido**. Año de expiración de la tarje |
+| `expiration_month`      | `string` | **Requerido**. Mes de expiración de la tarjeta |
+
+Response:
+| Field | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `token`      | `string` | 16 caracteres de token. Este es valido por 1 minutos |
+
+#### Get Card
+
+```http
+  GET /card?token={token}
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `token` | `string` | **Requerido**. Token asociado a la tarjeta |
+
+Response:
+| Field | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `email`      | `string` | **Requerido**. Email del propietario de la tarje |
+| `card_number`      | `string` | **Requerido**. Numero de tarjeta |
+| `expiration_year`      | `string` | **Requerido**. Año de expiración de la tarje |
+| `expiration_month`      | `string` | **Requerido**. Mes de expiración de la tarjeta |
+
 # Postman
 Para ejecutar los end-point podemos utilizar el archivo
 
